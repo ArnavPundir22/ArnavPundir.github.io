@@ -29,30 +29,49 @@ p {
     color: #8b949e;
 }
 
-/* Header */
-header{
-    min-height: 100vh; /* Full screen height */
-    padding: 4rem 2rem; /* Top-bottom & left-right spacing */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center;
+/.hero-section {
     background-color: #0d1117;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
 }
 
-header h1 {
-    text-shadow: 0 0 15px #61dafb, 0 0 30px #61dafb;
-}
-
-.port {
-    font-size: 2.5em;
+.site-title {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #f39c12;
-    text-align: start;
-    text-shadow: none;
+    margin-bottom: 1rem;
 }
 
-.port span {
-    color: #c9d1d9;
+.intro-text .greeting {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00d8ff;
+    text-shadow: 0 0 20px rgba(0, 216, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 1.2rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: #999;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* Navigation Bar */
