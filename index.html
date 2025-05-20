@@ -103,41 +103,31 @@ function closeMenu() {
 
 </head>
 <body>
-    <!-- Intro Section -->
-    <section id="intro-section" class="intro-section">
-        <header>
-            <h2 class="port"><strong>P<span><b>o</b></span>rt<span><b>fo</b></span>lio</strong></h2>
-            <h3>Hi, I am</h3>
-            <h1>Arnav Pundir</h1>
-            <p class="hero-subtitle">B.Tech in Computer Science | Software Developer | Tech Enthusiast</p>
-            <br><br>
-            <p class="hero-description">
-                Welcome to my portfolio! I am a passionate first-year Computer Science and Engineering student 
-                with experience in Java, C++, Python, HTML, CSS, and JavaScript. I enjoy building intelligent software 
-                systems, responsive web designs, and exploring AI innovations.
-            </p>  
-            <br>
-            <button id="knowMoreBtn" class="know-more-btn">Know More About Me</button>      
-        </header>
-    </section>
+  <!-- Landing Page Section -->
+  <section id="landing">
+    <h2 class="portfolio-title">Portfolio</h2>
+    <div class="landing-content">
+      <p>Hi, I am</p>
+      <h1 class="glow">Arnav Pundir</h1>
+      <p class="subtitle">B.Tech in Computer Science | Software Developer | Tech Enthusiast</p>
+      <p class="intro">Welcome to my portfolio! I am a passionate first-year Computer Science and Engineering student with experience in Java, C++, Python, HTML, CSS, and JavaScript. I enjoy building intelligent software systems, responsive web designs, and exploring AI innovations.</p>
+      <button onclick="showMainContent()">Know More About Me</button>
+    </div>
+  </section>
 
-    <!-- Main Content that slides in -->
-    <div id="main-content" class="main-content">
-        <!-- NAVIGATION -->
-        <nav>
-            <div class="nav-container">
-                <div class="nav-logo">Portfolio</div>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <div class="nav-links" id="navLinks">
-                    <a href="#about" onclick="closeMenu()">About</a>
-                    <a href="#skills" onclick="closeMenu()">Skills</a>
-                    <a href="#projects" onclick="closeMenu()">Projects</a>
-                    <a href="Document/ARNAV_PUNDIR_C.V.pdf" download="Arnav_Pundir_CV" onclick="closeMenu()">Download CV</a>
-                </div>
-            </div>
-        </nav>
+
+  <!-- Main Content Section (hidden initially) -->
+  <section id="main-content">
+    <nav>
+      <ul>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#">Download CV</a></li>
+      </ul>
+    </nav>
+
 
 
     <section id="about">
@@ -228,11 +218,20 @@ function closeMenu() {
             <a href="mailto:arnavp128@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>   
-        <script>
-        document.getElementById("knowMoreBtn").addEventListener("click", function() {
-            document.getElementById("main-content").classList.add("show");
-            document.getElementById("intro-section").classList.add("hide");
-        });
+     
+  <script>
+    function showMainContent() {
+      const landing = document.getElementById('landing');
+      const mainContent = document.getElementById('main-content');
+
+      landing.style.opacity = '0';
+      setTimeout(() => {
+        landing.style.display = 'none';
+        mainContent.style.display = 'block';
+        mainContent.style.opacity = '1';
+      }, 500);
+    }
+  </script>
     </script>
 </body>
 </html>
