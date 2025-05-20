@@ -281,4 +281,108 @@ footer {
 header h1 {
     animation: glowing 1.5s ease-in-out infinite, colorChange 3s ease-in-out infinite;
 }
+/* Your existing styles remain unchanged ... */
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fadeInDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fadeInRight { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes bounceIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 15px #61dafb; }
+    50% { text-shadow: 0 0 20px #61dafb, 0 0 30px #61dafb, 0 0 40px #61dafb; }
+    100% { text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 15px #61dafb; }
+}
+
+@keyframes colorChange {
+    0% { color: #61dafb; }
+    25% { color: #c9d1d9; }
+    50% { color: #8b949e; }
+    75% { color: #61dafb; }
+    100% { color: #c9d1d9; }
+}
+
+header h1 {
+    animation: glowing 1.5s ease-in-out infinite, colorChange 3s ease-in-out infinite;
+}
+
+/* =================== Responsive Design =================== */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .skills-list li {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 95%;
+        font-size: 0.95rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .cv-button {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+    }
+}
+
 
