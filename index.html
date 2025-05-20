@@ -242,23 +242,26 @@
 
     </div>
 </section>
-        <!-- contact.html -->
-<form action="https://formsubmit.co/your-email@example.com" method="POST">
-  <label>Your Name:</label>
-  <input type="text" name="name" required><br>
+<form class="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
+    <h2>Contact Me</h2>
 
-  <label>Your Email:</label>
-  <input type="email" name="email" required><br>
+    <div class="form-group">
+      <label>Your Name:</label>
+      <input type="text" name="name" required>
+    </div>
 
-  <label>Your Message:</label>
-  <textarea name="message" required></textarea><br>
+    <div class="form-group">
+      <label>Your Email:</label>
+      <input type="email" name="email" required>
+    </div>
 
-  <!-- Optional extras -->
-  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-  <input type="hidden" name="_captcha" value="false">
-
-  <button type="submit">Send Message</button>
-</form>
+    <div class="form-group">
+      <label>Your Message:</label>
+      <textarea name="message" required></textarea>
+    </div>
+    
+    <button type="submit">Send Message</button>
+  </form>
     <footer>
         <p>© 2024 Arnav Pundir. All rights reserved.</p>
         <p>Feel free to reach out for collaborations or queries!</p>
