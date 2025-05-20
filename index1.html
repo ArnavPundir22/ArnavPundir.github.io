@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>   
+    <script>
+    const slider = document.querySelector('.project-slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // speed
+        slider.scrollLeft = scrollLeft - walk;
+    });
+</script>
+
+</head>
+<body>
+    <header>
+        <h2 class="port"><strong>P<span><b>o</b></span>rt<span><b>fo</b></span>lio</strong></h2>
+        <h3>Hi, I am</h3>
+        <h1>Arnav Pundir</h1>
+        <p class="hero-subtitle">B.Tech in Computer Science | Software Developer | Tech Enthusiast</p>
+        <br><br>
+        <p class="hero-description">
+            Welcome to my portfolio! I am a passionate first-year Computer Science and Engineering student 
+            with experience in Java, C++, Python, HTML, CSS, and JavaScript. I enjoy building intelligent software 
+            systems, responsive web designs, and exploring AI innovations. Explore my projects, learn about my skills, and let’s connect!
+        </p>        
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="Document/ARNAV PUNDIR C.V.pdf" download="Arnav_Pundir_CV">Download CV</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="Images/9c89d43d-72ed-47d8-898e-6ca8f45d8166.webp" alt="Arnav Pundir">
+            <p><b>Hello! I'm Arnav Pundir</b>, a B.Tech student in Computer Science and Engineering. 
+            I have a strong foundation in programming with <b>Java, C++, Python</b>, and frontend development using 
+            <b>HTML, CSS, and JavaScript</b>. I’m passionate about AI, desktop software development, and security-focused systems.<br><br>
+            This portfolio showcases my journey as a software enthusiast, with projects that reflect my problem-solving skills and learning mindset.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li style="--i: 1">Python</li>
+            <li style="--i: 2">Java</li>
+            <li style="--i: 3">C++</li>
+            <li style="--i: 4">JavaScript</li>
+            <li style="--i: 5">HTML & CSS</li>
+            <li style="--i: 6">PyQt5</li>
+            <li style="--i: 7">OpenCV</li>
+            <li style="--i: 8">TensorFlow</li>
+            <li style="--i: 9">cvzone</li>
+            <li style="--i: 10">YOLOv8</li>
+            <li style="--i: 11">dlib</li>
+            <li style="--i: 12">AI & Computer Vision</li>
+            <li style="--i: 13">Desktop Applications</li>
+            <li style="--i: 14">System Automation</li>
+        </ul>
+    </section>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-slider">
+
+        <div class="project-card">
+            <h3>Air-Mouse</h3>
+            <p>Controls the mouse with hand gestures without touching the mouse or trackpad using Python and OpenCV.</p>
+            <a href="https://github.com/ArnavPundir22/Air-Mouse" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Devin - Personal Desktop Voice Assistant</h3>
+            <p>Python-based voice assistant with system and media control capabilities.</p>
+            <a href="https://github.com/ArnavPundir22/Devin-Personal-Desktop-Voice-Assistant" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Face Attendance System</h3>
+            <p>Facial recognition system using blink detection and PyQt5 GUI.</p>
+            <a href="https://github.com/ArnavPundir22/Face-Attendance-System" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Smart Women Safety App</h3>
+            <p>Web app for location sharing and SOS trigger for women safety.</p>
+            <a href="https://github.com/ArnavPundir22/Smart-Women-Safety-App" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Students Grievance Support System</h3>
+            <p>Portal for anonymous and secure student grievance submission.</p>
+            <a href="https://github.com/ArnavPundir22/Students-Grievance-Support-System" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Anti-Spoofing System</h3>
+            <p>Real-time liveness detection system using TensorFlow and OpenCV.</p>
+            <a href="https://github.com/ArnavPundir22/Anti-Spoofing-" target="_blank">View on GitHub</a>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+    <footer>
+        <p>© 2024 Arnav Pundir. All rights reserved.</p>
+        <p>Feel free to reach out for collaborations or queries!</p>
+        <div class="social-icons">
+            <a href="https://github.com/ArnavPundir22" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/arnav-pundir128ap" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/abhivanshh_22" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+917060675133" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+            <a href="mailto:arnavp128@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>      
+</body>
+</html>
+
