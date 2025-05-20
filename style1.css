@@ -52,13 +52,8 @@ header h1 {
 .port span {
     color: #c9d1d9;
 }
-
 /* Navigation Bar */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 0;
     background: #161b22;
     position: sticky;
     top: 0;
@@ -67,7 +62,36 @@ nav {
     animation: fadeInDown 0.6s ease-in-out;
 }
 
-nav a {
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #61dafb;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
     text-decoration: none;
     font-size: 1rem;
     color: #61dafb;
@@ -76,12 +100,52 @@ nav a {
     transition: all 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     background: #61dafb;
     color: #0d1117;
     transform: scale(1.1);
     box-shadow: 0 4px 15px #61dafb;
 }
+
+/* Responsive Mobile Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #161b22;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        pointer-events: auto;
+        padding: 1rem 0;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        text-align: center;
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
 
 /* Section */
 section {
