@@ -7,128 +7,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style1.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
-    <script>
-function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active");
-}
-
-function closeMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.remove("active");
-}
-</script>
-    <style>
-        /* Hero Section (Landing) */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    padding: 4rem 2rem;
-    background-color: #0d1117;
-    text-align: center;
-    color: #c9d1d9;
-    max-width: 1100px;
-    margin: 0 auto;
-    animation: fadeInUp 1.8s ease forwards;
-}
-
-.hero h2 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    color: #d0e8f2; /* lighter, soft white */
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: #00ffff;
-    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
-    margin-bottom: 0.75rem;
-    line-height: 1.1;
-}
-
-.hero h3 {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #7f8c8d; /* muted gray */
-    margin-bottom: 2rem;
-    font-style: italic;
-}
-
-.hero p {
-    max-width: 750px;
-    line-height: 1.75;
-    font-size: 1.1rem;
-    color: #a5a5a5;
-    letter-spacing: 0.02em;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero {
-        padding: 3rem 1rem;
-        min-height: 75vh;
-    }
-
-    .hero h2 {
-        font-size: 1.1rem;
-    }
-
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-
-    .hero h3 {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-        max-width: 90%;
-    }
-}
-
-    </style>
-
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>   
 
 
 </head>
 <body>
-  <!-- Landing Page Section -->
-  <section id="landing">
-    <h2 class="portfolio-title">Portfolio</h2>
-    <div class="landing-content">
-      <p>Hi, I am</p>
-      <h1 class="glow">Arnav Pundir</h1>
-      <p class="subtitle">B.Tech in Computer Science | Software Developer | Tech Enthusiast</p>
-      <p class="intro">Welcome to my portfolio! I am a passionate first-year Computer Science and Engineering student with experience in Java, C++, Python, HTML, CSS, and JavaScript. I enjoy building intelligent software systems, responsive web designs, and exploring AI innovations.</p>
-      <button onclick="showMainContent()">Know More About Me</button>
-    </div>
-  </section>
+    <header>
+        <h2 class="port"><strong>P<span><b>o</b></span>rt<span><b>fo</b></span>lio</strong></h2>
+        <h3>Hi, I am</h3>
+        <h1>Arnav Pundir</h1>
+        <p class="hero-subtitle">B.Tech in Computer Science | Software Developer | Tech Enthusiast</p>
+        <br><br>
+        <p class="hero-description">
+            Welcome to my portfolio! I am a passionate first-year Computer Science and Engineering student 
+            with experience in Java, C++, Python, HTML, CSS, and JavaScript. I enjoy building intelligent software 
+            systems, responsive web designs, and exploring AI innovations. Explore my projects, learn about my skills, and let’s connect!
+        </p>        
+    </header>
 
-
-  <!-- Main Content Section (hidden initially) -->
-  <section id="main-content">
     <nav>
-      <ul>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#">Download CV</a></li>
-      </ul>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="Document/ARNAV_PUNDIR_C.V.pdf" download="Arnav_Pundir_CV">Download CV</a>
     </nav>
-
-
 
     <section id="about">
         <h2>About Me</h2>
@@ -217,22 +119,6 @@ function closeMenu() {
             <a href="tel:+917060675133" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
             <a href="mailto:arnavp128@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
-    </footer>   
-     
-  <script>
-    function showMainContent() {
-      const landing = document.getElementById('landing');
-      const mainContent = document.getElementById('main-content');
-
-      landing.style.opacity = '0';
-      setTimeout(() => {
-        landing.style.display = 'none';
-        mainContent.style.display = 'block';
-        mainContent.style.opacity = '1';
-      }, 500);
-    }
-  </script>
-    </script>
+    </footer>      
 </body>
 </html>
-
