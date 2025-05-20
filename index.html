@@ -25,12 +25,20 @@
         </p>        
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="Document/ARNAV_PUNDIR_C.V.pdf" download="Arnav_Pundir_CV">Download CV</a>
-    </nav>
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">Portfolio</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- FontAwesome icon -->
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#skills" onclick="closeMenu()">Skills</a>
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <a href="Document/ARNAV_PUNDIR_C.V.pdf" download="Arnav_Pundir_CV" onclick="closeMenu()">Download CV</a>
+        </div>
+    </div>
+</nav>
 
     <section id="about">
         <h2>About Me</h2>
@@ -120,5 +128,15 @@
             <a href="mailto:arnavp128@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>      
+    <script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+}
+</script>
+
 </body>
 </html>
