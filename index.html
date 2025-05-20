@@ -256,7 +256,25 @@
             <a href="tel:+917060675133" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
             <a href="mailto:arnavp128@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
-    </footer>      
+    </footer>    
+    <!-- contact.html -->
+<form action="https://formsubmit.co/your-email@example.com" method="POST">
+  <label>Your Name:</label>
+  <input type="text" name="name" required><br>
+
+  <label>Your Email:</label>
+  <input type="email" name="email" required><br>
+
+  <label>Your Message:</label>
+  <textarea name="message" required></textarea><br>
+
+  <!-- Optional extras -->
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Send Message</button>
+</form>
+
     <script>
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
