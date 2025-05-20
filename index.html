@@ -8,34 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style1.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>   
-    <script>
-    const slider = document.querySelector('.project-slider');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
 
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // speed
-        slider.scrollLeft = scrollLeft - walk;
-    });
-</script>
 
 </head>
 <body>
@@ -56,7 +29,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="Document/ARNAV PUNDIR C.V.pdf" download="Arnav_Pundir_CV">Download CV</a>
+        <a href="Document/ARNAV_PUNDIR_C.V.pdf" download="Arnav_Pundir_CV">Download CV</a>
     </nav>
 
     <section id="about">
