@@ -247,6 +247,37 @@ section:nth-child(even) {
     }
 }
 
+.about-text {
+    max-width: 600px;
+    color: #cfd8dc;
+    animation: fadeInRight 1.5s ease forwards;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-text h2 {
+    color: #61dafb;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #cfd8dc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .about-text {
+        text-align: center;
+    }
+}
+
+
 
 /* Skills Section */
 .skills-list {
