@@ -216,8 +216,8 @@ section:nth-child(even) {
     display: flex;
     min-height: 100vh;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-evenly;
+    gap: 2rem;
     animation: fadeInUp 1.5s ease-in-out;
 }
 
