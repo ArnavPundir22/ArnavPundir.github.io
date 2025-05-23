@@ -171,11 +171,15 @@ nav {
 
 /* Section */
 section {
-    padding: 4rem 2rem;
-    min-height: 100vh;
+    height: 100vh;
+    padding: 2rem;
     text-align: center;
-    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     animation: fadeInUp 1.5s ease-in-out forwards;
+    opacity: 0;
 }
 
 section:nth-child(odd) {
@@ -189,7 +193,6 @@ section:nth-child(even) {
 /* About Section */
 .about-container {
     display: flex;
-    min-height: 100vh;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -214,7 +217,6 @@ section:nth-child(even) {
 /* Skills Section */
 .skills-list {
     display: flex;
-    min-height: 100vh;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
@@ -537,3 +539,4 @@ header h1 {
     button:hover {
       background: #2563eb;
     }
+  </style>
