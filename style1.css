@@ -194,25 +194,59 @@ section:nth-child(even) {
 .about-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .about-container img {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
-    border: 3px solid #61dafb;
-    box-shadow: 0 0 20px #61dafb;
-    animation: zoomIn 1.5s ease-in-out;
+    border: 4px solid #61dafb;
+    box-shadow: 0 0 25px #61dafb;
+    animation: zoomIn 1.2s ease forwards;
+    transition: transform 0.3s ease;
+}
+
+.about-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #21a1f1;
+    cursor: pointer;
 }
 
 .about-container p {
     max-width: 600px;
-    line-height: 1.5;
-    animation: fadeInRight 1.5s ease-in-out;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #cfd8dc;
+    animation: fadeInRight 1.5s ease forwards;
+    text-align: left;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .about-container img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about-container p {
+        max-width: 90%;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
 
 /* Skills Section */
 .skills-list {
