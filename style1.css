@@ -172,6 +172,7 @@ nav {
 /* Section */
 section {
     padding: 4rem 2rem;
+    min-height: 100vh;
     text-align: center;
     opacity: 0;
     animation: fadeInUp 1.5s ease-in-out forwards;
@@ -188,6 +189,7 @@ section:nth-child(even) {
 /* About Section */
 .about-container {
     display: flex;
+    min-height: 100vh;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -212,6 +214,7 @@ section:nth-child(even) {
 /* Skills Section */
 .skills-list {
     display: flex;
+    min-height: 100vh;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
