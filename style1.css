@@ -503,6 +503,7 @@ header h1 {
       padding: 12px 15px;
       border: 1px solid #d1d5db;
       border-radius: 8px;
+      color: #000;
       background: #f9fafb;
       font-size: 1rem;
       transition: border 0.3s ease;
@@ -513,6 +514,7 @@ header h1 {
       border-color: #3b82f6;
       outline: none;
       background: #fff;
+      color: #000;
     }
 
     textarea {
