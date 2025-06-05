@@ -216,18 +216,32 @@ section:nth-child(even) {
 }
 
 /* Skills Section */
+/* Font Awesome is required for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+.skills-section {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d1117;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
     animation: fadeInUp 1.5s ease-in-out;
-     min-height: 100vh; /* Full screen height */
-    width: 100vw;       /* Full screen width */
-    padding: 2rem;      /* Optional: some inner space */
-    box-sizing: border-box; 
+    width: 100%;
+    max-width: 1200px;
 }
 
+/* Skill Item Styles */
 .skills-list li {
     list-style: none;
     padding: 1rem 1.5rem;
@@ -237,13 +251,56 @@ section:nth-child(even) {
     border: 2px solid #61dafb;
     border-radius: 15px;
     box-shadow: 0 0 10px #61dafb;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    opacity: 0;
+    animation: fadeInSkill 0.6s ease forwards;
+    animation-delay: calc(var(--i) * 0.15s);
+    white-space: nowrap;
 }
 
 .skills-list li:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #61dafb;
+    color: #ffffff;
 }
+
+/* Icon Styling */
+.skills-list li i {
+    color: #61dafb;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.skills-list li:hover i {
+    color: #ffffff;
+    text-shadow: 0 0 8px #61dafb;
+}
+
+/* Fade-in animation */
+@keyframes fadeInSkill {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Projects Section */
 .project-card {
