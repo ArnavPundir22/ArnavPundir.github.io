@@ -229,33 +229,51 @@ section:nth-child(even) {
     background: linear-gradient(135deg, #0d1117, #1a1f2b);
     animation: fadeInUp 1.5s ease-in-out;
 }
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    background: radial-gradient(circle, #0d1117 30%, #1f2733 100%);
+    animation: fadeInUp 1.2s ease;
+}
 
 .skills-list li {
     list-style: none;
-    padding: 1.2rem 2rem;
-    font-size: 1.2rem;
-    background: rgba(22, 27, 34, 0.8);
-    color: #61dafb;
-    border: 2px solid #61dafb;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #61dafb44;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    backdrop-filter: blur(8px);
-    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     font-weight: 500;
+    background: rgba(22, 27, 34, 0.9);
+    color: #61dafb;
+    border: 1px solid #61dafb99;
+    border-radius: 50px;
+    box-shadow: 0 0 12px #61dafb44;
+    transition: all 0.3s ease;
+    cursor: default;
+    backdrop-filter: blur(6px);
+    text-shadow: 0 0 2px #000;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .skills-list li:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 20px #61dafb, 0 0 30px #61dafb33;
-    background: rgba(97, 218, 251, 0.1);
+    transform: scale(1.1);
+    background: #61dafb20;
+    box-shadow: 0 0 18px #61dafb, 0 0 30px #61dafb33;
 }
 
-/* Animation Keyframes */
+/* Animation Keyframe */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(50px);
     }
     100% {
         opacity: 1;
@@ -263,13 +281,14 @@ section:nth-child(even) {
     }
 }
 
-/* Optional: Responsive font scaling */
+/* Responsive Tweaks */
 @media (max-width: 600px) {
     .skills-list li {
-        font-size: 1rem;
-        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+        padding: 0.8rem 1.4rem;
     }
 }
+
 
 /* Projects Section */
 .project-card {
