@@ -220,29 +220,55 @@ section:nth-child(even) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    align-items: center; /* Center vertically */
+    gap: 1.5rem;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #0d1117, #1a1f2b);
     animation: fadeInUp 1.5s ease-in-out;
-     min-height: 100vh; /* Full screen height */
-    width: 100vw;       /* Full screen width */
-    padding: 2rem;      /* Optional: some inner space */
-    box-sizing: border-box; 
 }
 
 .skills-list li {
     list-style: none;
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 2rem;
     font-size: 1.2rem;
-    background: #161b22;
+    background: rgba(22, 27, 34, 0.8);
     color: #61dafb;
     border: 2px solid #61dafb;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #61dafb;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #61dafb44;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    font-weight: 500;
 }
 
 .skills-list li:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #61dafb;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #61dafb, 0 0 30px #61dafb33;
+    background: rgba(97, 218, 251, 0.1);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Responsive font scaling */
+@media (max-width: 600px) {
+    .skills-list li {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
 }
 
 /* Projects Section */
