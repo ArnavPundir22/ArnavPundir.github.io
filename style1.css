@@ -216,32 +216,44 @@ section:nth-child(even) {
 }
 
 /* Skills Section */
-/* Font Awesome is required for icons */
+/* Import Font Awesome for icons */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
+/* Entire Skills Section Styling */
 .skills-section {
     min-height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: #0d1117;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem;
     box-sizing: border-box;
 }
 
+/* Section Heading */
+.skills-section h2 {
+    text-align: center;
+    color: #f39c12;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Skills List Container */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    animation: fadeInUp 1.5s ease-in-out;
     width: 100%;
     max-width: 1200px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
-/* Skill Item Styles */
+/* Individual Skill Item */
 .skills-list li {
     list-style: none;
     padding: 1rem 1.5rem;
@@ -261,6 +273,7 @@ section:nth-child(even) {
     white-space: nowrap;
 }
 
+/* Hover Effects */
 .skills-list li:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #61dafb;
@@ -278,7 +291,7 @@ section:nth-child(even) {
     text-shadow: 0 0 8px #61dafb;
 }
 
-/* Fade-in animation */
+/* Animation Keyframes */
 @keyframes fadeInSkill {
     from {
         opacity: 0;
@@ -298,6 +311,21 @@ section:nth-child(even) {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .skills-list {
+        gap: 0.5rem;
+    }
+
+    .skills-list li {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        min-width: 140px;
+        text-align: center;
+        justify-content: center;
     }
 }
 
